@@ -1,14 +1,16 @@
 import streamlit as st
 
 
-st.title("🔥💧GRIMORIA 🌪️🌱")
-st.markdown("## Le grimoire en ligne des animaux élémentaires")
+st.markdown("## 🔥💧GRIMORIA 🌪️🌱")
+st.markdown("### Le grimoire en ligne des animaux élémentaires")
 
 c1 = st.container(border=True)
-element = c1.selectbox("Choisis ton élément", 
-                       options=["","🔥 Feu", "💧 Eau", "🌪️ Vent", "🌱 Terre"])
+element = c1.selectbox(
+    "Choisis ton élément", 
+    options=["","🔥 Feu", "💧 Eau", "🌪️ Vent", "🌱 Terre"]
+)
 
-text = "ABCDEFGHIJ"
+text = "TRLVRVWNOECZGUDEQFSSOUMEJDTNSSMRWESVWUGEIMFAWE"
 
 def get_text_from_animal(offset:int):
     output = ""
@@ -41,5 +43,6 @@ if element:
 
     if output : 
         c3 = st.container(border=True)
-        c3.write("Code correct ! Voici ton prochain indice :")
+        c3.write("Code correct ! Voici ta récompense :")
         c3.write(f":{color}[{output}]")
+        c3.write("Combine la avec les 3 autres éléments pendant l'épreuve commune")
